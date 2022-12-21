@@ -265,16 +265,16 @@
                 window.setTimeout(() => {
                     document.getElementById('menuList').style.display = "block";
                     document.getElementById('navbar').style.animation = "none";
-                    document.getElementsByTagName('iconify-icon')[0].attributes[0].value = "mdi:close"
-                }, 240)
+                    document.getElementsByTagName('iconify-icon')[0].attributes[0].value = "mdi:close";
+                }, 240);
                 return;
             }
             document.getElementById('menu').checked = false;
             window.setTimeout(() => {
                 document.getElementById('menuList').style.display = "none";
                 document.getElementById('menuList').style.animation = "none";
-                document.getElementsByTagName('iconify-icon')[0].attributes[0].value = "icon-park:hamburger-button"
-            }, 75)
+                document.getElementsByTagName('iconify-icon')[0].attributes[0].value = "icon-park:hamburger-button";
+            }, 75);
             document.getElementById('menuList').style.animation = "menuUp 250ms ease-out";
         }
         window.onresize = () => {
@@ -282,6 +282,7 @@
                 if (document.getElementById('menuList').style.display != "inline-flex") {
                     document.getElementById('menuList').style.display = "inline-flex";
                     document.getElementById('menu').checked = false;
+                    document.getElementsByTagName('iconify-icon')[0].attributes[0].value = "icon-park:hamburger-button";
                     document.getElementById('menuList').style.animation = "none";
                 }
                 return;
