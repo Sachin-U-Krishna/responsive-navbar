@@ -16,20 +16,24 @@
             padding: 0;
             box-sizing: border-box;
             font-family: 'Poppins', sans-serif;
+            z-index: -1;
         }
         #navbar ul{
             list-style-type: none;
             padding: 0;
             margin: 0;
         }
+        .nav-header {
+            position: sticky;
+            top: 0;
+            z-index: 999;
+        }
         #navbar{
-            display: flex;
             justify-content: space-between;
             align-items: center;
             border-bottom: 1px solid #e3e3e3;
             box-shadow: 5px 3px 10px #d2d2d2;
-            position: sticky;
-            top: 0;
+            background-color: white;
         }
         #navbar ul > a {
             text-decoration: none;
@@ -53,6 +57,9 @@
             display: none;
         }
         @media (min-width: 769px){
+            #navbar {
+                display: flex;
+            }
             .hamburger {
                 display: none;
             }
@@ -122,20 +129,43 @@
         </style>
 </head>
 <body>
-    <nav id="navbar">
-        <span id="nav-title"><a class="nav-head" href="">Navbar</a></span>
-        <ul id="menuList">
-            <a href=""><li>Home</li></a>
-            <a href=""><li>About</li></a>
-            <a href=""><li>Services</li></a>
-            <a href=""><li>Contact</li></a>
-        </ul>
-        <span class="hamburger">
-            <input type="checkbox" id="menu">
-            <iconify-icon icon="icon-park:hamburger-button"  width="46" onclick="menuButton()"></iconify-icon>
-        </span>
-    </nav>
+    <div class="nav-header">
+        <nav id="navbar">
+            <span id="nav-title"><a class="nav-head" href="">Navbar</a></span>
+            <ul id="menuList">
+                <a href=""><li>Home</li></a>
+                <a href=""><li>About</li></a>
+                <a href=""><li>Services</li></a>
+                <a href=""><li>Contact</li></a>
+            </ul>
+            <span class="hamburger">
+                <input type="checkbox" id="menu">
+                <iconify-icon icon="icon-park:hamburger-button"  width="46" onclick="menuButton()"></iconify-icon>
+            </span>
+        </nav>
+    </div class="nav-header">
 
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc consectetur leo tellus, vitae placerat lorem sagittis fringilla. Integer sit amet diam eros. Vivamus varius posuere odio sed convallis. Ut luctus id neque vitae gravida. Cras in eros eu nulla condimentum interdum et ut dolor. Integer eros massa, sagittis sed justo eu, aliquam varius enim. Quisque ac interdum justo. Phasellus imperdiet lectus et orci luctus tincidunt. Suspendisse tempor ac lacus ut vehicula. Praesent imperdiet tristique nunc, nec iaculis lectus mollis quis. Integer eget neque sit amet diam porta porta eget molestie quam. Maecenas sollicitudin nunc ac felis aliquet, id dictum urna venenatis. Etiam vulputate tincidunt purus in convallis. Phasellus faucibus turpis lorem, ac ullamcorper risus elementum porta. Nam mattis diam at dui malesuada cursus. Duis a venenatis arcu.
+
+Nunc imperdiet volutpat ligula id tempor. In in ipsum ac nisl tincidunt faucibus et eget nibh. Integer ullamcorper eros ut nunc rutrum, non fermentum sem tincidunt. Ut tincidunt cursus augue eget varius. Quisque in sem gravida, eleifend purus eu, maximus purus. Etiam scelerisque odio vitae sem maximus fermentum. Nulla facilisi. Maecenas at lectus lacus. Vestibulum dolor massa, laoreet scelerisque odio ac, viverra vehicula eros.
+
+Vivamus accumsan porta elit id posuere. Nunc ut elementum dui. Vestibulum vulputate arcu massa, nec dapibus lacus faucibus sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam efficitur, nibh at maximus feugiat, arcu quam euismod est, ac iaculis mauris risus at orci. Morbi auctor faucibus lorem eu sagittis. Aliquam sed odio lectus. Nulla gravida iaculis mi, a laoreet mi fringilla sit amet. Etiam erat orci, elementum eu porttitor id, sodales at est. Donec dignissim tristique erat, a ornare nisi lacinia nec.
+
+Pellentesque id tincidunt elit. Nulla facilisi. Nulla hendrerit mauris non felis cursus mollis. Donec aliquam nunc quis nisi varius, ut semper nunc vulputate. Nulla vel nisi id dolor volutpat feugiat. Sed rutrum, sapien ac ultrices venenatis, dui sem aliquam leo, a elementum quam nibh id leo. Duis laoreet dui et maximus hendrerit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc mattis nunc risus, scelerisque sagittis velit imperdiet vitae. Morbi dapibus, est eget vehicula efficitur, lorem felis tempor elit, quis facilisis tortor libero eget nulla. Etiam sit amet consequat metus, vitae efficitur risus.
+
+Proin est libero, interdum et est vel, porta consectetur ante. Vestibulum in massa interdum, tempor leo sit amet, commodo risus. Donec dignissim dapibus scelerisque. Nam metus libero, maximus vitae elit at, blandit suscipit nisl. Donec lorem mi, convallis eget magna eu, pharetra venenatis lacus. Aenean blandit, tellus ut semper pharetra, purus mauris interdum metus, at cursus dui lorem quis nibh. Quisque commodo imperdiet mattis. Mauris nisl elit, tempus vitae mi nec, luctus finibus nisi. Donec ex ex, vehicula ut rhoncus eu, blandit et enim. Sed aliquet fringilla vestibulum. Proin lobortis nibh turpis, placerat facilisis tortor ullamcorper pellentesque.
+
+Quisque massa lorem, gravida in felis eget, mattis vulputate purus. Vestibulum imperdiet vel metus sit amet mollis. Sed luctus urna molestie libero consequat, vitae dictum mi pulvinar. In accumsan lacus viverra augue tincidunt vestibulum. Nunc feugiat tellus sit amet consectetur facilisis. Aenean venenatis leo purus, a imperdiet est iaculis eget. Quisque sit amet quam id turpis gravida egestas. Proin vel neque fermentum, dapibus ex vitae, sagittis tellus. Suspendisse potenti.
+
+Morbi sit amet velit porta, tincidunt dolor sed, luctus nibh. Vestibulum facilisis ullamcorper magna, ac rutrum lectus bibendum vitae. Nunc consequat nisl massa, vitae posuere nulla ultrices a. Maecenas vel auctor lacus. Curabitur at purus ac leo viverra condimentum id sit amet lacus. Fusce sit amet nisi convallis, finibus erat id, egestas massa. Phasellus tincidunt varius ullamcorper. Vivamus luctus iaculis nunc, nec efficitur orci fermentum ut. Praesent efficitur turpis eu urna vulputate malesuada. Nulla viverra libero at elit condimentum, non commodo purus accumsan.
+
+Duis sit amet ullamcorper diam. Mauris pellentesque ante at magna elementum, nec finibus lacus tristique. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla id tempor libero, vitae imperdiet massa. Ut eleifend augue ut justo hendrerit, ut eleifend velit finibus. Nunc tristique ornare pretium. Nullam cursus porta mattis. Donec at accumsan odio. Praesent enim libero, lacinia ut molestie sed, dictum nec nisl. Integer nec risus enim. Suspendisse in diam convallis eros ornare tincidunt. Mauris efficitur eget odio non euismod. Vestibulum ut fringilla mauris, a tincidunt arcu.
+
+Fusce vehicula felis sed laoreet gravida. Vivamus consequat tristique interdum. Duis ut tortor quis elit feugiat gravida vitae vitae metus. Duis eleifend placerat lectus, at volutpat lorem. Integer convallis justo gravida enim cursus, a tristique dolor sodales. Integer at lacus maximus, pretium lectus eu, semper tellus. Etiam leo urna, luctus nec justo non, porttitor rutrum ex. Nulla nec egestas metus, vitae cursus velit. Vivamus congue fringilla ante volutpat euismod.
+
+Praesent ornare ut ante eu porta. Cras suscipit nunc ut cursus commodo. Sed egestas nibh in dolor viverra dignissim. Nullam aliquam nulla leo, vitae efficitur sem euismod eu. Maecenas laoreet diam vitae lectus dignissim, eget iaculis quam imperdiet. Vivamus efficitur eros non lorem porta gravida. Vivamus mattis enim enim, ut facilisis ex egestas quis. Phasellus mattis est ut tincidunt laoreet. Maecenas posuere mattis tincidunt. Pellentesque mattis cursus nunc. Suspendisse eget nisl at orci lobortis molestie.
+    </p>
     <script>
         function menuButton() {
             if(!document.getElementById('menu').checked){
@@ -144,15 +174,15 @@
                 window.setTimeout(() => {
                     document.getElementById('menuList').style.display = "block";
                     document.getElementById('navbar').style.animation = "none";
-                },250)
+                },240)
                 return;
             }
             document.getElementById('menu').checked = false;
             window.setTimeout(() => {
                 document.getElementById('menuList').style.display = "none";
                 document.getElementById('menuList').style.animation = "none";
-            },100)
-            document.getElementById('menuList').style.animation = "menuUp 250ms linear";
+            },75)
+            document.getElementById('menuList').style.animation = "menuUp 250ms ease-out";
         }
         window.onresize = () =>  {
             if(window.innerWidth>768) {
